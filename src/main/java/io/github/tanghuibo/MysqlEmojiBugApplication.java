@@ -29,8 +29,7 @@ public class MysqlEmojiBugApplication {
         preparedStatement.close();
     }
 
-    private static Connection getConnection(Properties properties) throws SQLException, ClassNotFoundException {
-        String driver = properties.getProperty("datasource.driver");
+    private static Connection getConnection(Properties properties) throws SQLException {
         String url = properties.getProperty("datasource.url");
         String username = properties.getProperty("datasource.username");
         String password = properties.getProperty("datasource.password");
